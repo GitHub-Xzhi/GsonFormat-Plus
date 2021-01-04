@@ -13,14 +13,30 @@
   <p>
   1.4.0
   <ul>
-  <li>New: Support for autovalue</li>
-  <li>New: Support for lombok</li>
-  <li>New: Support for split generate class</li>
+      <li>New: Support for autovalue</li>
+      <li>New: Support for lombok</li>
+      <li>New: Support for split generate class</li>
   </ul>
+
   1.5.0
   <ul>
-  <li>fix several bug </li>
-  <li>fix unlock setting window size </li>
+      <li>fix several bug </li>
+      <li>fix unlock setting window size </li>
+  </ul>
+
+  1.5.2
+  <ul>
+      <li> 【新增】新增@Data </li>
+      <li> 【修改】Jackson部分增强 </li>
+  </ul>
+
+  1.6.1
+  <ul>
+      <li> 【修改】部分汉化 </li>
+      <li> 【优化】解决界面卡顿问题 </li>
+      <li> 【新增】新增实现序列化 </li>
+  </ul>
+
   </p>
 ]]></change-notes>
     <actions>

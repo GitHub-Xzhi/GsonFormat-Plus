@@ -23,7 +23,7 @@ sourceSets {
     }
 }
 intellij {
-    version 'IC-2016.2.5'
+    version 'IC-2017.1.6'
     pluginName 'GsonFormat-Plus'
     updateSinceUntilBuild false
 

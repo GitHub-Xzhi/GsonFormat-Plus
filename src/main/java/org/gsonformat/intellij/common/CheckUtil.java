@@ -135,8 +135,11 @@ public class CheckUtil {
 
     public String handleArg(String arg) {
 
-        arg = arg.replaceAll("-", "");
-        Matcher matcher = sPattern.matcher(arg);
+        // arg = arg.replaceAll("-", "");
+        // 连字符转驼峰
+        String[] split = arg.replaceAll("[^-]*-(.)[^-]*", "$1-").split("-");
+        arg = String.format(arg.replaceAll("-(.)", "%S"), (Object[]) split);
+		Matcher matcher = sPattern.matcher(arg);
         if (matcher.find()) {
             return Constant.DEFAULT_PREFIX + arg;
         } else {

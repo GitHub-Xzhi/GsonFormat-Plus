@@ -1,8 +1,13 @@
 package org.gsonformat.intellij.process;
 
+import com.intellij.psi.JavaPsiFacade;
 import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiElementFactory;
+import com.intellij.psi.PsiJavaCodeReferenceElement;
+import com.intellij.psi.PsiReferenceList;
 import com.intellij.psi.codeStyle.JavaCodeStyleManager;
+import com.intellij.psi.util.InheritanceUtil;
+
 import org.apache.http.util.TextUtils;
 import org.gsonformat.intellij.common.FieldHelper;
 import org.gsonformat.intellij.common.PsiClassUtil;
@@ -44,7 +49,7 @@ public abstract class Processor {
     public void process(ClassEntity classEntity, PsiElementFactory factory, PsiClass cls, IProcessor visitor) {
         mainPackage = PsiClassUtil.getPackage(cls);
         onStarProcess(classEntity, factory, cls, visitor);
-
+        implementsSerializable(cls);
         for (FieldEntity fieldEntity : classEntity.getFields()) {
             generateField(factory, fieldEntity, cls, classEntity);
         }
@@ -211,7 +216,7 @@ public abstract class Processor {
                         "public static class " + classEntity.getClassName() + "{}";
                 generateClass = factory.createClassFromText(classContent, null).getInnerClasses()[0];
             }
-
+			implementsSerializable(generateClass);
             if (generateClass != null) {
 
                 for (ClassEntity innerClass : classEntity.getInnerClasss()) {
@@ -292,5 +297,25 @@ public abstract class Processor {
             fieldSb.append("public  ").append(fieldEntity.getFullNameType()).append(" ").append(filedName).append(" ; ");
         }
         return fieldSb.append(fixme).toString();
+    }
+
+    /**
+     * 实现 Serializable
+     * @param psiClass
+     */
+    private void implementsSerializable(PsiClass psiClass) {
+        if (Config.getInstant().isSerializableEnabled()) {
+            String className = "java.io.Serializable";
+            boolean isImplemented = InheritanceUtil.isInheritor(psiClass, className);
+            if (!isImplemented) {
+                PsiReferenceList implementsList = psiClass.getImplementsList();
+                if (implementsList != null) {
+                    PsiElementFactory elementFactory = JavaPsiFacade.getElementFactory(psiClass.getProject());
+                    PsiJavaCodeReferenceElement referenceElementByFQClassName = elementFactory
+                            .createReferenceElementByFQClassName(className, psiClass.getResolveScope());
+                    implementsList.add(referenceElementByFQClassName);
+                }
+            }
+        }
     }
 }

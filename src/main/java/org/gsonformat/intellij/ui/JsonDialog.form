@@ -38,7 +38,7 @@
               <focusable value="false"/>
               <opaque value="false"/>
               <requestFocusEnabled value="false"/>
-              <text value="Format "/>
+              <text value="格式化 "/>
               <verifyInputWhenFocusTarget value="false"/>
             </properties>
           </component>
@@ -139,7 +139,7 @@
                 </constraints>
                 <properties>
                   <margin top="0" left="0" bottom="0" right="0"/>
-                  <text value="Cancel"/>
+                  <text value="取消"/>
                 </properties>
               </component>
               <component id="808a2" class="javax.swing.JLabel" binding="errorLB">
@@ -163,7 +163,7 @@
                   <horizontalAlignment value="2"/>
                   <horizontalTextPosition value="2"/>
                   <margin top="0" left="0" bottom="0" right="0"/>
-                  <text value="Setting"/>
+                  <text value="设置"/>
                   <verticalAlignment value="0"/>
                 </properties>
               </component>
@@ -177,7 +177,7 @@
                   <horizontalAlignment value="0"/>
                   <horizontalTextPosition value="4"/>
                   <margin top="0" left="0" bottom="0" right="12"/>
-                  <text value="OK"/>
+                  <text value="确定"/>
                 </properties>
               </component>
             </children>

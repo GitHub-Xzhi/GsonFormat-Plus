@@ -19,6 +19,7 @@ public class Config {
     private boolean reuseEntity = false;
     // @Data
     private boolean lombokData = true;
+    private boolean serializableEnabled = true;
     private boolean virgoMode = true; //处女座模式
     private boolean useFieldNamePrefix = false;
     private boolean splitGenerate = false;
@@ -70,6 +71,8 @@ public class Config {
         PropertiesComponent.getInstance().setValue("reuseEntity", reuseEntity + "");
 
         PropertiesComponent.getInstance().setValue("lombokData", lombokData + "");
+
+        PropertiesComponent.getInstance().setValue("序列化", serializableEnabled + "");
 
         PropertiesComponent.getInstance().setValue("virgoMode", virgoMode + "");
         PropertiesComponent.getInstance().setValue("filedNamePreFixStr", filedNamePreFixStr + "");
@@ -337,5 +340,13 @@ public class Config {
 
     public void setUseWrapperClass(boolean useWrapperClass) {
         this.useWrapperClass = useWrapperClass;
+    }
+
+    public boolean isSerializableEnabled() {
+        return serializableEnabled;
+    }
+
+    public void setSerializableEnabled(boolean serializableEnabled) {
+        this.serializableEnabled = serializableEnabled;
     }
 }

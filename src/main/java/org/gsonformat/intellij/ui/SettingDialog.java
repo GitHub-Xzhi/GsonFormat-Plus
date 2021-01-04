@@ -58,6 +58,8 @@ public class SettingDialog extends JFrame {
     private JRadioButton lombokRB;
     private String annotaionStr;
     private JCheckBox useWrapperClassCB;
+    // 序列化
+    private JCheckBox serializableCB;
 
     public SettingDialog(Project project) {
         setContentPane(contentPane);
@@ -105,6 +107,7 @@ public class SettingDialog extends JFrame {
         reuseEntityCB.setSelected(Config.getInstant().isReuseEntity());
 
         lombokDataCB.setSelected(Config.getInstant().isLombokData());
+        serializableCB.setSelected(Config.getInstant().isSerializableEnabled());
 
         objectButton.setEnabled(objectFromDataCB.isSelected());
         object1Button.setEnabled(objectFromData1CB.isSelected());
@@ -355,6 +358,7 @@ public class SettingDialog extends JFrame {
         Config.getInstant().setReuseEntity(reuseEntityCB.isSelected());
 
         Config.getInstant().setLombokData(lombokDataCB.isSelected());
+        Config.getInstant().setSerializableEnabled(serializableCB.isSelected());
 
         Config.getInstant().setSuffixStr(suffixEdit.getText());
         Config.getInstant().setVirgoMode(virgoModelCB.isSelected());

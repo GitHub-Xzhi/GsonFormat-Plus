@@ -1,7 +1,10 @@
 <idea-plugin version="2">
+    <depends>com.intellij.modules.lang</depends>
     <name>GsonFormat-Plus</name>
     <description><![CDATA[
-<html>quickly to convert a JSON string to an InnerClassEntity class ..<br>
+<html> 基于
+<a href="https://plugins.jetbrains.com/plugin/7654-gsonformat"> GsonFormatrt </a>
+二次开发 <br>
 <a href="https://github.com/GitHub-Xzhi/GsonFormat-Plus"> openSource</a>
       </html>
       ]]>

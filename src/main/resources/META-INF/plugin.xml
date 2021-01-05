@@ -1,51 +1,49 @@
-<idea-plugin version="2">
+<idea-plugin>
     <depends>com.intellij.modules.lang</depends>
     <name>GsonFormat-Plus</name>
-    <description><![CDATA[
-<html> 基于
-<a href="https://plugins.jetbrains.com/plugin/7654-gsonformat"> GsonFormatrt </a>
-二次开发 <br>
-<a href="https://github.com/GitHub-Xzhi/GsonFormat-Plus"> openSource</a>
-      </html>
-      ]]>
+    <description>
+    <![CDATA[
+        The secondary development based on
+        <html>
+        <a href="https://plugins.jetbrains.com/plugin/7654-gsonformat"> GsonFormatrt</a>
+        , which makes the software's function enhanced. <br>
+        <a href="https://github.com/GitHub-Xzhi/GsonFormat-Plus"> openSource</a>
+        </html>
+    ]]>
     </description>
-    <version>1.6.1</version>
+    <version>1.6.3</version>
     <vendor email="cx_zhi@qq.com">Xzhi</vendor>
     <idea-version since-build="107.121"/>
-    <change-notes><![CDATA[
-  <p>
-  1.4.0
-  <ul>
-      <li>New: Support for autovalue</li>
-      <li>New: Support for lombok</li>
-      <li>New: Support for split generate class</li>
-  </ul>
+    <change-notes>
+    <![CDATA[
+      <p>
+      1.5.2
+      <ul>
+          <li>【新增】新增@Data</li>
+          <li>【修改】Jackson部分增强</li>
+      </ul>
 
-  1.5.0
-  <ul>
-      <li>fix several bug </li>
-      <li>fix unlock setting window size </li>
-  </ul>
+      1.6.2
+      <ul>
+          <li>【修改】部分汉化</li>
+          <li>【优化】解决界面卡顿问题</li>
+          <li>【新增】新增实现序列化</li>
+      </ul>
 
-  1.5.2
-  <ul>
-      <li> 【新增】新增@Data </li>
-      <li> 【修改】Jackson部分增强 </li>
-  </ul>
+      1.6.3
+      <ul>
+          <li>【修改】大部分汉化</li>
+          <li>【新增】新增Icon</li>
+      </ul>
 
-  1.6.1
-  <ul>
-      <li> 【修改】部分汉化 </li>
-      <li> 【优化】解决界面卡顿问题 </li>
-      <li> 【新增】新增实现序列化 </li>
-  </ul>
-
-  </p>
-]]></change-notes>
+      </p>
+    ]]>
+    </change-notes>
     <actions>
-        <action id="Gsonformat" class="org.gsonformat.intellij.MainAction" text="GsonFormat-Plus">
-            <add-to-group group-id="GenerateGroup" anchor="last"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="alt s"/>
+        <action id="Gsonformat" class="org.gsonformat.intellij.MainAction" text="GsonFormat-Plus"
+          icon="/icons/icon.png">
+            <add-to-group group-id="GenerateGroup" anchor="last" />
+            <keyboard-shortcut keymap="$default" first-keystroke="alt s" />
         </action>
     </actions>
     <extensions defaultExtensionNs="com.intellij"/>

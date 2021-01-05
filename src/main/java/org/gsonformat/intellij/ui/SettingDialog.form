@@ -29,7 +29,7 @@
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Cancel"/>
+                  <text value="取消"/>
                 </properties>
               </component>
             </children>
@@ -39,7 +39,7 @@
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="OK"/>
+              <text value="确定"/>
             </properties>
           </component>
           <hspacer id="c0618">
@@ -117,7 +117,7 @@
                   <grid row="2" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="edit"/>
+                  <text value="编辑"/>
                 </properties>
               </component>
               <component id="41497" class="javax.swing.JButton" binding="objectButton">
@@ -125,7 +125,7 @@
                   <grid row="1" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="edit"/>
+                  <text value="编辑"/>
                 </properties>
               </component>
               <component id="fdc77" class="javax.swing.JButton" binding="arrayButton">
@@ -133,7 +133,7 @@
                   <grid row="3" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="edit"/>
+                  <text value="编辑"/>
                 </properties>
               </component>
               <component id="f0d04" class="javax.swing.JButton" binding="array1Button">
@@ -141,7 +141,7 @@
                   <grid row="4" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="edit"/>
+                  <text value="编辑"/>
                 </properties>
               </component>
               <component id="d13a2" class="javax.swing.JCheckBox" binding="arrayFromData1CB">
@@ -310,7 +310,7 @@
                   <grid row="20" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Convert Library"/>
+                  <text value="JSON库"/>
                 </properties>
               </component>
               <component id="9eff9" class="javax.swing.JCheckBox" binding="virgoModelCB">
@@ -340,7 +340,7 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <text value="name prefix :"/>
+                  <text value="属性名前缀 :"/>
                 </properties>
               </component>
               <component id="fa434" class="javax.swing.JLabel">
@@ -348,7 +348,7 @@
                   <grid row="12" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="      name suffix : "/>
+                  <text value="      类名后缀 : "/>
                 </properties>
               </component>
               <component id="1a6f7" class="javax.swing.JSeparator">
@@ -383,7 +383,7 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <text value="generate comments"/>
+                  <text value="生成注释"/>
                 </properties>
               </component>
               <component id="61cbe" class="javax.swing.JCheckBox" binding="splitGenerateMode">
@@ -394,7 +394,7 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <text value="split generate"/>
+                  <text value="类分开生成（没有静态内部类）"/>
                 </properties>
               </component>
               <component id="70489" class="javax.swing.JCheckBox" binding="useSerializedNameCheckBox">

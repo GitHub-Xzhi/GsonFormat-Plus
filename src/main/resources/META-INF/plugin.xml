@@ -3,15 +3,42 @@
     <name>GsonFormat-Plus</name>
     <description>
     <![CDATA[
+        <h3>English:</h3>
+        Quickly to convert a JSON string to an InnerClassEntity class.
         The secondary development based on
-        <html>
-        <a href="https://plugins.jetbrains.com/plugin/7654-gsonformat"> GsonFormatrt</a>
-        , which makes the software's function enhanced. <br>
-        <a href="https://github.com/GitHub-Xzhi/GsonFormat-Plus"> openSource</a>
-        </html>
+        <a href="https://plugins.jetbrains.com/plugin/7654-gsonformat"> GsonFormat</a>
+        , which makes the plugin's function enhanced.
+        <br/><br/>
+        <strong>usage</strong><br/>
+        Use keyboard shortcuts in class
+        <ul>
+            <li><strong>Keyboard Shortcuts</strong>
+                <ul>
+                    <li>Alt+S</li>
+                    <li>Alt+Insert</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>中文：</h3>
+        快速将JSON字符串转换为实体类。
+        基于
+        <a href="https://plugins.jetbrains.com/plugin/7654-gsonformat"> GsonFormat </a>
+        二次开发，增强了插件本身的功能。
+        <br/><br/>
+        <strong>用法</strong><br/>
+        在类中使用快捷键
+        <ul>
+            <li><strong>快捷键（二选一）</strong>
+                <ul>
+                    <li>Alt+S</li>
+                    <li>Alt+Insert</li>
+                </ul>
+            </li>
+        </ul>
+        <a href="https://github.com/GitHub-Xzhi/GsonFormat-Plus">openSource</a>
     ]]>
     </description>
-    <version>1.6.3</version>
+    <version>1.6.3.2</version>
     <vendor email="cx_zhi@qq.com">Xzhi</vendor>
     <idea-version since-build="107.121"/>
     <change-notes>

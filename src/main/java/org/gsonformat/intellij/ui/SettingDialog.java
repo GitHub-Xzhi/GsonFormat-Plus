@@ -66,7 +66,7 @@ public class SettingDialog extends JFrame {
 //        setModal(true);
         getRootPane().setDefaultButton(okButton);
         this.setAlwaysOnTop(true);
-        setTitle("Setting");
+        setTitle("设置");
         okButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onOK();
@@ -310,7 +310,7 @@ public class SettingDialog extends JFrame {
                 EditDialog editDialog = new EditDialog(EditDialog.Type.OBJECT_FROM_DATA);
                 editDialog.setSize(600, 360);
                 editDialog.setLocationRelativeTo(null);
-                editDialog.setResizable(false);
+                // editDialog.setResizable(false);
                 editDialog.setVisible(true);
             }
         });
@@ -320,7 +320,7 @@ public class SettingDialog extends JFrame {
                 EditDialog editDialog = new EditDialog(EditDialog.Type.OBJECT_FROM_DATA1);
                 editDialog.setSize(600, 360);
                 editDialog.setLocationRelativeTo(null);
-                editDialog.setResizable(false);
+                // editDialog.setResizable(false);
                 editDialog.setVisible(true);
             }
         });
@@ -330,7 +330,7 @@ public class SettingDialog extends JFrame {
                 EditDialog editDialog = new EditDialog(EditDialog.Type.ARRAY_FROM_DATA);
                 editDialog.setSize(600, 600);
                 editDialog.setLocationRelativeTo(null);
-                editDialog.setResizable(false);
+                // editDialog.setResizable(false);
                 editDialog.setVisible(true);
             }
         });
@@ -340,7 +340,7 @@ public class SettingDialog extends JFrame {
                 EditDialog editDialog = new EditDialog(EditDialog.Type.ARRAY_FROM_DATA1);
                 editDialog.setSize(600, 600);
                 editDialog.setLocationRelativeTo(null);
-                editDialog.setResizable(false);
+                // editDialog.setResizable(false);
                 editDialog.setVisible(true);
             }
         });

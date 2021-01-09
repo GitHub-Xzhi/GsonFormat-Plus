@@ -139,6 +139,7 @@ public class CheckUtil {
         // 连字符转驼峰
         String[] split = arg.replaceAll("[^-]*-(.)[^-]*", "$1-").split("-");
         arg = String.format(arg.replaceAll("-(.)", "%S"), (Object[]) split);
+        arg = StringUtils.allUpperCase2LowerCase(arg);
 		Matcher matcher = sPattern.matcher(arg);
         if (matcher.find()) {
             return Constant.DEFAULT_PREFIX + arg;

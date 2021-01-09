@@ -1,11 +1,11 @@
 package org.gsonformat.intellij.ui;
 
-import cn.vearn.checktreetable.FiledTreeTableModel;
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiElementFactory;
 import com.intellij.psi.PsiFile;
+
 import org.gsonformat.intellij.ConvertBridge;
 import org.gsonformat.intellij.action.DataWriter;
 import org.gsonformat.intellij.common.PsiClassUtil;
@@ -17,14 +17,28 @@ import org.jdesktop.swingx.JXTreeTable;
 import org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode;
 import org.jdesktop.swingx.ux.CheckTreeTableManager;
 
-import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
+
+import javax.swing.DefaultListSelectionModel;
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.KeyStroke;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
+import cn.vearn.checktreetable.FiledTreeTableModel;
 
 import static javax.swing.ListSelectionModel.SINGLE_SELECTION;
 
@@ -58,7 +72,7 @@ public class FieldsDialog extends JFrame {
         this.psiClass = psiClass;
         this.generateClassStr = generateClassStr;
         setContentPane(contentPane);
-        setTitle("Virgo Model");
+        setTitle("预览模式");
         getRootPane().setDefaultButton(buttonOK);
         this.setAlwaysOnTop(true);
         initListener(classEntity, generateClassStr);

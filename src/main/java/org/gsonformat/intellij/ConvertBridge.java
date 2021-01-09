@@ -671,10 +671,11 @@ public class ConvertBridge {
             if (TextUtils.isEmpty(key)) {
                 return key;
             }
+            key = StringUtils.allUpperCase2LowerCase(key);
             String[] strings = key.split("_");
             StringBuilder stringBuilder = new StringBuilder();
-            for (int i = 0; i < strings.length; i++) {
-                stringBuilder.append(StringUtils.captureName(strings[i]));
+            for (String string : strings) {
+                stringBuilder.append(StringUtils.captureName(string));
             }
             name = stringBuilder.toString() + Config.getInstant().getSuffixStr();
         }

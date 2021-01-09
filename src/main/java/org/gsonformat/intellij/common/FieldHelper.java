@@ -19,7 +19,7 @@ public class FieldHelper {
             return Constant.DEFAULT_PREFIX + new Random().nextInt(333);
         }
         Matcher matcher = Pattern.compile("(\\w+)").matcher(name);
-        StringBuilder sb = new StringBuilder("_$");
+        StringBuilder sb = new StringBuilder(Constant.DEFAULT_PREFIX);
         while (matcher.find()) {
             sb.append(StringUtils.captureName(matcher.group(1)));
         }

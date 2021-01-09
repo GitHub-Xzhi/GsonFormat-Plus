@@ -2,6 +2,9 @@ package org.gsonformat.intellij.common;
 
 import org.apache.http.util.TextUtils;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * Created by dim on 16/11/5.
  */
@@ -47,4 +50,22 @@ public class StringUtils {
         return null;
     }
 
+    /**
+     * 是否全是大写字母
+     * @param word
+     * @return true有，false没有
+     */
+    public static boolean allUpperCase(String word) {
+        word = word.replaceAll("[_\\-]", "");
+        Pattern pattern = Pattern.compile("^[A-Z]+$");
+        Matcher matcher = pattern.matcher(word);
+        return matcher.find();
+    }
+
+    public static String allUpperCase2LowerCase(String word) {
+        if (allUpperCase(word)) {
+            word = word.toLowerCase();
+        }
+        return word;
+    }
 }

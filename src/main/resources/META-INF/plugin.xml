@@ -38,32 +38,54 @@
         <a href="https://github.com/GitHub-Xzhi/GsonFormat-Plus">openSource</a>
     ]]>
     </description>
-    <version>1.6.3.2</version>
+    <version>1.6.4</version>
     <vendor email="cx_zhi@qq.com">Xzhi</vendor>
-    <idea-version since-build="107.121"/>
+    <idea-version since-build="143.2370.31"/>
     <change-notes>
     <![CDATA[
-      <p>
-      1.5.2
+      <p>1.6.4</p>
       <ul>
-          <li>【新增】新增@Data</li>
-          <li>【修改】Jackson部分增强</li>
+          <li>[Fix] Fixed an issue where the Settings window was occluded under the small screen</li>
+          <li>[Modify] Edit window can be resized</li>
+          <li>[Fix] Fixed problems with class properties</li>
+      </ul>
+      <ul>
+          <li>【修复】修复设置窗口在小屏幕下被遮挡的问题</li>
+          <li>【修改】编辑窗口可调整大小</li>
+          <li>【修复】修复类属性相关问题</li>
       </ul>
 
-      1.6.2
+      <p>1.6.3</p>
+      <ul>
+          <li>[Modify] Most sinicization</li>
+          <li>[Add] Add Icon</li>
+      </ul>
+      <ul>
+          <li>【修改】大部分汉化</li>
+          <li>【新增】新增Icon</li>
+      </ul>
+
+      <p>1.6.2</p>
+      <ul>
+          <li>[Modify] Chinese part</li>
+          <li>[Optimize] Solve interface lags</li>
+          <li>[Add] Add implementation serialization</li>
+      </ul>
       <ul>
           <li>【修改】部分汉化</li>
           <li>【优化】解决界面卡顿问题</li>
           <li>【新增】新增实现序列化</li>
       </ul>
 
-      1.6.3
+      <p>1.5.2</p>
       <ul>
-          <li>【修改】大部分汉化</li>
-          <li>【新增】新增Icon</li>
+          <li>[Add] Add @Data</li>
+          <li>[Modify] Jackson partial enhancement</li>
       </ul>
-
-      </p>
+      <ul>
+          <li>【新增】新增@Data</li>
+          <li>【修改】Jackson部分增强</li>
+      </ul>
     ]]>
     </change-notes>
     <actions>

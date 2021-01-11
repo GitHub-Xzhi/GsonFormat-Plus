@@ -1,8 +1,11 @@
 package org.gsonformat.intellij.process;
 
-import com.intellij.psi.*;
+import com.intellij.psi.PsiAnnotation;
+import com.intellij.psi.PsiClass;
+import com.intellij.psi.PsiElement;
+import com.intellij.psi.PsiElementFactory;
+import com.intellij.psi.PsiModifierList;
 
-import org.gsonformat.intellij.config.Config;
 import org.gsonformat.intellij.entity.ClassEntity;
 
 import java.util.regex.Pattern;
@@ -38,15 +41,9 @@ class JackProcessor extends Processor {
         Pattern pattern = Pattern.compile("@.*?JsonIgnoreProperties");
         if (firstChild != null && !pattern.matcher(firstChild.getText()).find()) {
 
-            if (Config.getInstant().isLombokData()) {
-                PsiAnnotation lombok =
-                        factory.createAnnotationFromText("@lombok.Data", generateClass);
-                modifierList.addBefore(lombok, firstChild);
-            }
-
-            PsiAnnotation annotationFromText =
-                    factory.createAnnotationFromText("@com.fasterxml.jackson.annotation.JsonIgnoreProperties(ignoreUnknown = true)", generateClass);
-            modifierList.addBefore(annotationFromText, firstChild);
-        }
+			PsiAnnotation annotationFromText = factory.createAnnotationFromText(
+					"@com.fasterxml.jackson.annotation.JsonIgnoreProperties(ignoreUnknown = true)", generateClass);
+			modifierList.addBefore(annotationFromText, firstChild);
+		}
     }
 }

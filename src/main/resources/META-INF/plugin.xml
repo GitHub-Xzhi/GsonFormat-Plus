@@ -1,4 +1,5 @@
 <idea-plugin>
+    <depends>com.intellij.modules.java</depends>
     <depends>com.intellij.modules.lang</depends>
     <name>GsonFormat-Plus</name>
     <description>
@@ -38,11 +39,21 @@
         <a href="https://github.com/GitHub-Xzhi/GsonFormat-Plus">openSource</a>
     ]]>
     </description>
-    <version>1.6.4</version>
+    <version>1.6.5</version>
     <vendor email="cx_zhi@qq.com">Xzhi</vendor>
     <idea-version since-build="143.2370.31"/>
     <change-notes>
     <![CDATA[
+      <p>1.6.5</p>
+      <ul>
+          <li>[Fix] Fixed @Data duplicate generation issue</li>
+          <li>[Add] @data works in all JSON libraries</li>
+      </ul>
+      <ul>
+          <li>【修复】修复@Data重复生成的问题</li>
+          <li>【新增】@Data在所有JSON库都生效</li>
+      </ul>
+
       <p>1.6.4</p>
       <ul>
           <li>[Fix] Fixed an issue where the Settings window was occluded under the small screen</li>

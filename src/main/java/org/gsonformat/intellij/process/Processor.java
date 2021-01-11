@@ -1,9 +1,12 @@
 package org.gsonformat.intellij.process;
 
 import com.intellij.psi.JavaPsiFacade;
+import com.intellij.psi.PsiAnnotation;
 import com.intellij.psi.PsiClass;
+import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementFactory;
 import com.intellij.psi.PsiJavaCodeReferenceElement;
+import com.intellij.psi.PsiModifierList;
 import com.intellij.psi.PsiReferenceList;
 import com.intellij.psi.codeStyle.JavaCodeStyleManager;
 import com.intellij.psi.util.InheritanceUtil;
@@ -80,6 +83,21 @@ public abstract class Processor {
     protected void onStarProcess(ClassEntity classEntity, PsiElementFactory factory, PsiClass cls, IProcessor visitor) {
         if (visitor != null) {
             visitor.onStarProcess(classEntity, factory, cls);
+            generateDataAnnotation(factory, cls);
+        }
+    }
+
+    private void generateDataAnnotation(PsiElementFactory factory, PsiClass cls) {
+        if (Config.getInstant().isLombokData()) {
+            PsiModifierList modifierList = cls.getModifierList();
+            if (modifierList != null) {
+                PsiElement firstChild = modifierList.getFirstChild();
+                PsiAnnotation annotation = modifierList.findAnnotation("lombok.Data");
+                if (annotation == null) {
+                    PsiAnnotation lombok = factory.createAnnotationFromText("@lombok.Data", cls);
+                    modifierList.addBefore(lombok, firstChild);
+                }
+            }
         }
     }
 
@@ -247,6 +265,7 @@ public abstract class Processor {
     protected void onEndGenerateClass(PsiElementFactory factory, ClassEntity classEntity, PsiClass parentClass, PsiClass generateClass, IProcessor visitor) {
         if (visitor != null) {
             visitor.onEndGenerateClass(factory, classEntity, parentClass, generateClass);
+            generateDataAnnotation(factory, generateClass);
         }
     }
 

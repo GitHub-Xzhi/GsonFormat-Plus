@@ -10,8 +10,8 @@ public class Config {
     private static Config config;
 
     private boolean fieldPrivateMode = true;
-    private boolean generateComments = true;
-    private boolean useSerializedName = false;
+    private boolean generateComments = false;
+    private boolean useSerializedName = true;
     private boolean objectFromData = false;
     private boolean objectFromData1 = false;
     private boolean arrayFromData = false;
